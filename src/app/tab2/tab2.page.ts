@@ -6,7 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  email: string | undefined;
+  password: string | undefined;
+  confirmPassword: string | undefined;
 
-  constructor() {}
+  constructor() {
+  }
+
+  register() {
+    console.log(this.email);
+    console.log(this.password);
+  }
 
 }
