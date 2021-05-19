@@ -1,0 +1,23 @@
+
+// Install IONIC :
+    npm install -g ionic  
+    npm install -g @ionic/cli    
+
+
+// CREATE PROJECT:
+    ionic-login % npm install -g @ionic/cli cordova-res
+
+    ionic-login % git clone https://github.com/Silzhar/angular-ionic.git login-app
+
+    % cd login-app && npm install && ionic serve
+
+
+// Version ionic:
+    ionic --version    
+
+
+// UP PROJECT:
+    ionic-login % ng serve --o    
+
+// Generate services (and directory services):  
+    ionic g s services/login
