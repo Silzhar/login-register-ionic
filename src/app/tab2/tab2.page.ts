@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { LoginService } from '../services/login.service'
 
 @Component({
   selector: 'app-tab2',
@@ -6,16 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  email: string | undefined;
-  password: string | undefined;
-  confirmPassword: string | undefined;
+  email: string | undefined
+  password: string | undefined
+  confirmPassword: string | undefined
+  passwordError: boolean
 
-  constructor() {
+  constructor(public loginService: LoginService) {
   }
 
   register() {
-    console.log(this.email);
-    console.log(this.password);
+    const user = { email: this.email, password: this.password };
+    this.loginService.register(user).subscribe(data => {
+      console.log(data);
+    console.log(this.email)
+    console.log(this.password)
+    })
   }
 
 }
